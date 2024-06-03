@@ -41,3 +41,4 @@ terraform.rc
 # arquivo de variaveis de ambiente:
 credentials_testes.sh
 plan
+plano

@@ -9,12 +9,12 @@ module "ec2-instance" {
   create_spot_instance = true
   spot_type            = "one-time"
 
-  ami                         = "ami-09040d770ffe2224f"
+  ami                         = var.ami_linux
   associate_public_ip_address = true
-  iam_role_name               = "INFOPUBLIC_LinuxServersEC2"
-  key_name                    = "terraform-ec2-testes"
-  instance_type               = "t3.small"
-  name                        = "testes-engels"
-  subnet_id                   = "subnet-09aa01223ccf2ac4d"
-  vpc_security_group_ids      = ["sg-04f67045b565761d8"]
+  iam_role_name               = var.iam_role
+  key_name                    = var.key_name
+  instance_type               = var.instance_type
+  name                        = var.name
+  subnet_id                   = var.subnet_id
+  vpc_security_group_ids      = var.vpc_security_groups
 }
