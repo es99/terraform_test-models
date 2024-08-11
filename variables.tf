@@ -1,13 +1,3 @@
-variable "ami_linux" {
-  description = "ami Linux que será utilizada ao iniciar a instância."
-  type        = string
-}
-
-variable "ami_windows" {
-  description = "ami Windows que será utilizada ao iniciar a instância."
-  type        = string
-}
-
 variable "iam_role" {
   description = "IAM Role que será utilizada na instância."
   type        = string
